@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}SEOversion - AI-Powered SEO Services | Boost Your Rankings{% endblock %}
+{% block meta_description %}Transform your online presence with SEOversion's AI-driven SEO solutions. Expert keyword research, content optimization, and data-driven strategies that deliver results.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>AI-Powered SEO Solutions That Drive Real Results</h1>
+        <p>Transform your website into a traffic-generating machine with our cutting-edge AI technology and proven SEO strategies. Get more visibility, more leads, and more revenue.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('free_audit') }}" class="btn btn-primary">Get Free SEO Audit</a>
+            <a href="{{ url_for('pricing') }}" class="btn btn-outline">View Pricing</a>
+        </div>
+    </div>
+</section>
+
+<!-- Value Propositions -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose SEOversion?</h2>
+            <p>We combine AI technology with human expertise to deliver SEO results that matter</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Powered Insights</h3>
+                <p>Our proprietary AI tools analyze millions of data points to uncover hidden opportunities and predict what will work before you invest time and money.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Proven Track Record</h3>
+                <p>Average traffic increase of 250% within 6 months. We've helped over 500 businesses dominate their markets with data-driven SEO strategies.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Results</h3>
+                <p>While SEO is a long-term strategy, our AI-accelerated approach helps you see initial improvements in weeks, not months. Quick wins while building sustainable growth.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Complete Transparency</h3>
+                <p>Real-time dashboards, detailed monthly reports, and bi-weekly strategy calls. You'll always know exactly what we're doing and why it matters.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 data-target="500">0</h3>
+                <p>Rankings Improved</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="250">0</h3>
+                <p>% Avg Traffic Growth</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="300">0</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="95">0</h3>
+                <p>% Client Retention</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section bg-gray">
+    <div class="container">
+        <div class="section-title">
+            <h2>How We Drive Your Success</h2>
+            <p>Our proven 3-step process to SEO domination</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">1</div>
+                <h3>Analyze & Strategy</h3>
+                <p>We audit your website, research your competitors, and identify high-value keywords using AI. You'll get a custom strategy designed specifically for your business goals and market position.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">2</div>
+                <h3>Optimize & Execute</h3>
+                <p>Our team implements technical fixes, optimizes content, builds high-quality links, and creates SEO-rich content. Every action is data-driven and designed to improve your rankings.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">3</div>
+                <h3>Monitor & Scale</h3>
+                <p>We track rankings daily, analyze user behavior, and continuously refine the strategy. As results compound, we scale what works and pivot away from what doesn't.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Products Showcase -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Powered by Cutting-Edge AI Tools</h2>
+            <p>Access the same technology we use for Fortune 500 clients</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>AI Keyword Explorer</h3>
+                <p>Find thousands of untapped keyword opportunities with machine learning. Our AI predicts search volume, competition, and conversion potential before your competitors even know these keywords exist.</p>
+                <a href="{{ url_for('ai_products') }}#keyword-explorer" class="btn btn-outline">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>Content Optimizer AI</h3>
+                <p>Get real-time content scoring as you write. Our AI suggests improvements for readability, keyword usage, and semantic relevance. Write content that ranks on the first try.</p>
+                <a href="{{ url_for('ai_products') }}#content-optimizer" class="btn btn-outline">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>Rank Tracker Pro</h3>
+                <p>Monitor thousands of keywords across multiple search engines and locations. AI-powered insights predict ranking changes before they happen and suggest proactive optimizations.</p>
+                <a href="{{ url_for('ai_products') }}#rank-tracker" class="btn btn-outline">Learn More →</a>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('ai_products') }}" class="btn btn-primary">View All AI Tools</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+{% if testimonials %}
+<section class="section testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p>Real results from real businesses</p>
+        </div>
+        <div class="testimonial-slider">
+            {% for testimonial in testimonials[:1] %}
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"{{ testimonial.testimonial_text }}"</p>
+                <div class="testimonial-author">
+                    {% if testimonial.client_photo %}
+                    <img src="{{ testimonial.client_photo }}" alt="{{ testimonial.client_name }}" class="author-photo">
+                    {% endif %}
+                    <div class="author-info">
+                        <h4>{{ testimonial.client_name }}</h4>
+                        <p>{{ testimonial.company }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Latest Blog Posts -->
+{% if blog_posts %}
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Latest SEO Insights</h2>
+            <p>Learn from the experts. New articles every week.</p>
+        </div>
+        <div class="blog-grid">
+            {% for post in blog_posts %}
+            <article class="blog-card">
+                {% if post.featured_image %}
+                <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="blog-image">
+                {% else %}
+                <div class="blog-image" style="background: linear-gradient(135deg, #0066CC 0%, #00FF88 100%);"></div>
+                {% endif %}
+                <div class="blog-content">
+                    <span class="blog-category">{{ post.category }}</span>
+                    <h3>{{ post.title }}</h3>
+                    <p class="blog-excerpt">{{ post.excerpt }}</p>
+                    <div class="blog-meta">
+                        <span>{{ post.published_date|format_date }}</span>
+                        <span>{{ post.views }} views</span>
+                    </div>
+                    <a href="{{ url_for('blog_post', slug=post.slug) }}">Read More →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('blog') }}" class="btn btn-outline">View All Articles</a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Trust Badges -->
+<section class="section bg-gray">
+    <div class="container text-center">
+        <h3 class="mb-4">Trusted by Businesses Worldwide</h3>
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="feature-card">
+                <h4>🎯 Google Partner</h4>
+                <p>Certified Google Partner Agency</p>
+            </div>
+            <div class="feature-card">
+                <h4>⭐ 4.9/5 Rating</h4>
+                <p>Based on 150+ Reviews</p>
+            </div>
+            <div class="feature-card">
+                <h4>🏆 Award Winning</h4>
+                <p>Best SEO Agency 2025</p>
+            </div>
+            <div class="feature-card">
+                <h4>🔒 SOC 2 Certified</h4>
+                <p>Enterprise-Grade Security</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Dominate Search Results?</h2>
+        <p>Get a free SEO audit and discover exactly what's holding your website back. No obligations, just actionable insights.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free Audit Now</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline" style="color: white; border-color: white;">Talk to an Expert</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

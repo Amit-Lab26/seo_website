@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Careers at SEOversion | Join Our SEO & AI Team{% endblock %}
+{% block meta_description %}Join a fast-growing SEO agency. We're hiring SEO specialists, content writers, developers, and AI engineers. Remote-friendly positions available.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Build Your Career With Us</h1>
+        <p>Join a team of passionate SEO experts, data scientists, and innovators who are transforming how businesses approach search marketing.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-4">Why Work at SEOversion?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Competitive Compensation</h3>
+                <p>Top-of-market salaries, performance bonuses, and equity options for senior roles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏡</div>
+                <h3>Remote-First Culture</h3>
+                <p>Work from anywhere. We have team members across 15 countries.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Learning & Development</h3>
+                <p>$2,000 annual budget for courses, conferences, and certifications.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏥</div>
+                <h3>Health Benefits</h3>
+                <p>100% covered health, dental, and vision insurance for you and your family.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌴</div>
+                <h3>Unlimited PTO</h3>
+                <p>Take time off when you need it. We trust you to manage your work-life balance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Rapid Growth</h3>
+                <p>Clear career paths with opportunities to lead projects and mentor team members.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="mb-4">Open Positions</h2>
+        {% for job in jobs %}
+        <div class="service-card" style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <h3>{{ job.title }}</h3>
+                    <div class="blog-meta" style="margin: 0.5rem 0 1rem 0;">
+                        <span>📍 {{ job.location }}</span> | <span>⏰ {{ job.type }}</span> | <span>📂 {{ job.department }}</span>
+                    </div>
+                    <p>{{ job.description }}</p>
+                </div>
+                <a href="{{ url_for('contact') }}?job={{ job.title }}" class="btn btn-primary" style="white-space: nowrap;">Apply Now</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Don't See a Perfect Fit?</h2>
+        <p>We're always looking for talented people. Send us your resume and let us know what you'd bring to the team.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get in Touch</a>
+    </div>
+</section>
+{% endblock %}

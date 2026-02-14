@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+
+{% block title %}AI SEO Tools | Automated Keyword Research & Content Optimization{% endblock %}
+{% block meta_description %}Discover SEOversion's suite of AI-powered SEO tools. Automate keyword research, content optimization, rank tracking, and competitor analysis with cutting-edge AI.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Next-Generation AI SEO Tools</h1>
+        <p>Harness the power of artificial intelligence to discover opportunities, optimize content, and dominate search results faster than ever before.</p>
+    </div>
+</section>
+
+<!-- AI Products Grid -->
+<section class="section">
+    <div class="container">
+        <!-- Product 1: AI Keyword Explorer -->
+        <div class="service-card" id="keyword-explorer" style="margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <h2>AI Keyword Explorer</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-dark);">Discover thousands of untapped keyword opportunities using machine learning algorithms that analyze search patterns, user intent, and ranking probability.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>AI-powered keyword suggestions based on semantic relevance</li>
+                        <li>Search volume predictions with 95% accuracy</li>
+                        <li>Keyword difficulty scoring (0-100 scale)</li>
+                        <li>Search intent classification (informational/commercial/transactional)</li>
+                        <li>Question-based keyword discovery</li>
+                        <li>Trend analysis and seasonality detection</li>
+                        <li>Competitor keyword gap analysis</li>
+                        <li>Export to CSV, PDF, or integrate via API</li>
+                    </ul>
+                    
+                    <h4>Use Cases:</h4>
+                    <p>Content planning, PPC campaign optimization, competitive analysis, SEO strategy development</p>
+                </div>
+                
+                <div>
+                    <div style="background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3>Pricing</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul style="text-align: left; list-style: none; padding: 0; margin: 1.5rem 0;">
+                            <li style="padding: 0.5rem 0;">✓ 500 keyword searches/month</li>
+                            <li style="padding: 0.5rem 0;">✓ Unlimited exports</li>
+                            <li style="padding: 0.5rem 0;">✓ API access</li>
+                            <li style="padding: 0.5rem 0;">✓ Priority support</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Try Free for 14 Days</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2: Content Optimizer AI -->
+        <div class="service-card" id="content-optimizer" style="margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <h2>Content Optimizer AI</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-dark);">Write SEO-optimized content that ranks on the first try. Our AI analyzes top-ranking pages and provides real-time optimization suggestions as you write.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Real-time content scoring (0-100 scale)</li>
+                        <li>LSI keyword suggestions for semantic relevance</li>
+                        <li>Readability analysis (Flesch-Kincaid, SMOG, etc.)</li>
+                        <li>Word count recommendations based on SERP analysis</li>
+                        <li>Header tag optimization suggestions</li>
+                        <li>Internal linking opportunities</li>
+                        <li>Competitor content comparison</li>
+                        <li>Plagiarism detection</li>
+                        <li>Meta description generator</li>
+                    </ul>
+                    
+                    <h4>Use Cases:</h4>
+                    <p>Blog writing, landing page optimization, product descriptions, content refresh campaigns</p>
+                </div>
+                
+                <div>
+                    <div style="background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3>Pricing</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul style="text-align: left; list-style: none; padding: 0; margin: 1.5rem 0;">
+                            <li style="padding: 0.5rem 0;">✓ 100 content analyses/month</li>
+                            <li style="padding: 0.5rem 0;">✓ Unlimited optimizations</li>
+                            <li style="padding: 0.5rem 0;">✓ WordPress plugin</li>
+                            <li style="padding: 0.5rem 0;">✓ Team collaboration</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Try Free for 14 Days</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3: Rank Tracker Pro -->
+        <div class="service-card" id="rank-tracker" style="margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <h2>Rank Tracker Pro</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-dark);">Monitor thousands of keywords across multiple search engines and locations. AI-powered insights predict ranking changes before they happen.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Daily automated rank checking</li>
+                        <li>Multi-location tracking (track rankings by city/country)</li>
+                        <li>Competitor ranking comparison</li>
+                        <li>SERP feature tracking (featured snippets, local pack, etc.)</li>
+                        <li>AI-powered ranking predictions</li>
+                        <li>Mobile vs desktop tracking</li>
+                        <li>Historical ranking data and trends</li>
+                        <li>Automated email reports</li>
+                        <li>White-label reports for agencies</li>
+                    </ul>
+                    
+                    <h4>Use Cases:</h4>
+                    <p>Campaign tracking, competitor monitoring, client reporting, SEO performance analysis</p>
+                </div>
+                
+                <div>
+                    <div style="background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3>Pricing</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul style="text-align: left; list-style: none; padding: 0; margin: 1.5rem 0;">
+                            <li style="padding: 0.5rem 0;">✓ Track 1,000 keywords</li>
+                            <li style="padding: 0.5rem 0;">✓ 5 competitors tracked</li>
+                            <li style="padding: 0.5rem 0;">✓ Daily updates</li>
+                            <li style="padding: 0.5rem 0;">✓ White-label reports</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Try Free for 14 Days</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4: Technical SEO Auditor -->
+        <div class="service-card" id="seo-auditor" style="margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <h2>Technical SEO Auditor</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-dark);">Automatically scan your website for 200+ technical SEO issues. AI prioritizes fixes based on potential impact on rankings and traffic.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Comprehensive site crawl (unlimited pages)</li>
+                        <li>200+ technical SEO checks</li>
+                        <li>Core Web Vitals monitoring</li>
+                        <li>Mobile-friendliness testing</li>
+                        <li>Broken link detection and fixing suggestions</li>
+                        <li>Duplicate content identification</li>
+                        <li>XML sitemap validation</li>
+                        <li>Robots.txt analyzer</li>
+                        <li>Structured data validation</li>
+                        <li>AI-powered issue prioritization</li>
+                        <li>Developer-friendly fix recommendations</li>
+                    </ul>
+                    
+                    <h4>Use Cases:</h4>
+                    <p>Site migrations, ongoing monitoring, pre-launch checks, technical SEO campaigns</p>
+                </div>
+                
+                <div>
+                    <div style="background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3>Pricing</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$129</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul style="text-align: left; list-style: none; padding: 0; margin: 1.5rem 0;">
+                            <li style="padding: 0.5rem 0;">✓ Unlimited page crawls</li>
+                            <li style="padding: 0.5rem 0;">✓ Weekly automated audits</li>
+                            <li style="padding: 0.5rem 0;">✓ Issue tracking & alerts</li>
+                            <li style="padding: 0.5rem 0;">✓ API access</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Try Free for 14 Days</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 5: AI Content Generator -->
+        <div class="service-card" id="content-generator" style="margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                <div>
+                    <h2>AI Content Generator</h2>
+                    <p style="font-size: 1.125rem; color: var(--text-dark);">Generate SEO-optimized blog posts, product descriptions, and meta tags in minutes. Our AI creates unique, plagiarism-free content that reads naturally.</p>
+                    
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Blog post generation (500-3,000 words)</li>
+                        <li>Product description writing</li>
+                        <li>Meta title and description generator</li>
+                        <li>FAQ content creation</li>
+                        <li>Content outline generator</li>
+                        <li>Tone and style customization</li>
+                        <li>Multi-language support (20+ languages)</li>
+                        <li>Built-in plagiarism checker</li>
+                        <li>SEO scoring for generated content</li>
+                        <li>Bulk content generation</li>
+                    </ul>
+                    
+                    <h4>Use Cases:</h4>
+                    <p>Content scaling, e-commerce product pages, blog ideation, meta tag creation</p>
+                    
+                    <p style="background: #FFF3CD; padding: 1rem; border-radius: 6px; border-left: 4px solid #FFC107; margin-top: 1rem;">
+                        <strong>Note:</strong> AI-generated content should always be reviewed and edited by humans to ensure accuracy, brand voice alignment, and E-A-T compliance.
+                    </p>
+                </div>
+                
+                <div>
+                    <div style="background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%); padding: 2rem; border-radius: 12px; text-align: center;">
+                        <h3>Pricing</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$69</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul style="text-align: left; list-style: none; padding: 0; margin: 1.5rem 0;">
+                            <li style="padding: 0.5rem 0;">✓ 50,000 words/month</li>
+                            <li style="padding: 0.5rem 0;">✓ Unlimited projects</li>
+                            <li style="padding: 0.5rem 0;">✓ Plagiarism checking</li>
+                            <li style="padding: 0.5rem 0;">✓ 20+ languages</li>
+                        </ul>
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Try Free for 14 Days</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bundle Pricing -->
+<section class="section bg-gray">
+    <div class="container">
+        <div class="section-title">
+            <h2>Save with AI Tool Bundles</h2>
+            <p>Get all our AI tools at a discounted rate</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>All-Access Pass</h3>
+                <div class="pricing-price">
+                    <span class="amount">$299</span>
+                    <span class="period">/month</span>
+                </div>
+                <p style="text-decoration: line-through; color: var(--text-light);">Regular price: $425/month</p>
+                <ul class="pricing-features">
+                    <li>All 5 AI tools included</li>
+                    <li>Save $126/month (30% off)</li>
+                    <li>Priority support</li>
+                    <li>Early access to new features</li>
+                    <li>Custom integrations available</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Get All-Access Pass</a>
+            </div>
+            
+            <div class="pricing-card popular">
+                <div class="pricing-badge">Agency Plan</div>
+                <h3>Agency Bundle</h3>
+                <div class="pricing-price">
+                    <span class="amount">$499</span>
+                    <span class="period">/month</span>
+                </div>
+                <p>Everything in All-Access, plus:</p>
+                <ul class="pricing-features">
+                    <li>10 team member accounts</li>
+                    <li>White-label reports</li>
+                    <li>Client management dashboard</li>
+                    <li>Dedicated account manager</li>
+                    <li>Custom API limits</li>
+                    <li>Training and onboarding</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Contact Sales</a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="pricing-price">
+                    <span class="amount">Custom</span>
+                </div>
+                <p>Tailored for large organizations</p>
+                <ul class="pricing-features">
+                    <li>Custom tool development</li>
+                    <li>Unlimited team members</li>
+                    <li>Private AI model training</li>
+                    <li>SLA guarantees</li>
+                    <li>On-premise deployment option</li>
+                    <li>Dedicated support team</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline" style="width: 100%;">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Try Any AI Tool Free for 14 Days</h2>
+        <p>No credit card required. Cancel anytime. Full access to all features.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary">Start Free Trial</a>
+    </div>
+</section>
+{% endblock %}

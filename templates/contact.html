@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Contact SEOversion | Get Your Free SEO Audit{% endblock %}
+{% block meta_description %}Ready to boost your rankings? Contact SEOversion for a free SEO consultation. Call (555) 123-4567 or fill out our form. Response within 24 hours.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Let's Grow Your Business Together</h1>
+        <p>Ready to start dominating search results? Fill out the form below and our team will get back to you within 24 hours.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+            <!-- Contact Form -->
+            <div>
+                <h2 class="mb-3">Send Us a Message</h2>
+                <form method="POST" action="{{ url_for('contact') }}">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Website URL</label>
+                        <input type="url" id="website" name="website" class="form-control" placeholder="https://">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service_interested">Service Interested In *</label>
+                        <select id="service_interested" name="service_interested" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="full-seo">Full SEO Services</option>
+                            <option value="keyword-research">Keyword Research</option>
+                            <option value="on-page-seo">On-Page SEO</option>
+                            <option value="technical-seo">Technical SEO</option>
+                            <option value="link-building">Link Building</option>
+                            <option value="content-marketing">Content Marketing</option>
+                            <option value="ai-tools">AI SEO Tools</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthly_traffic">Current Monthly Traffic</label>
+                        <select id="monthly_traffic" name="monthly_traffic" class="form-control">
+                            <option value="">Select range</option>
+                            <option value="0-1k">0 - 1,000</option>
+                            <option value="1k-10k">1,000 - 10,000</option>
+                            <option value="10k-50k">10,000 - 50,000</option>
+                            <option value="50k-100k">50,000 - 100,000</option>
+                            <option value="100k+">100,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget_range">Monthly Budget Range</label>
+                        <select id="budget_range" name="budget_range" class="form-control">
+                            <option value="">Select range</option>
+                            <option value="under-500">Under $500</option>
+                            <option value="500-1k">$500 - $1,000</option>
+                            <option value="1k-2.5k">$1,000 - $2,500</option>
+                            <option value="2.5k-5k">$2,500 - $5,000</option>
+                            <option value="5k+">$5,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referral_source">How did you hear about us?</label>
+                        <select id="referral_source" name="referral_source" class="form-control">
+                            <option value="">Select option</option>
+                            <option value="search-engine">Search Engine</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="referral">Referral</option>
+                            <option value="blog">Blog/Article</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" class="form-control" required placeholder="Tell us about your project and goals..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+            
+            <!-- Contact Information Sidebar -->
+            <div>
+                <div class="feature-card">
+                    <h3>Contact Information</h3>
+                    <p><strong>📞 Phone:</strong><br><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><strong>✉️ Email:</strong><br><a href="mailto:contact@seoversion.com">contact@seoversion.com</a></p>
+                    <p><strong>📍 Address:</strong><br>123 Digital Avenue, Suite 500<br>San Francisco, CA 94102</p>
+                    <p><strong>⏰ Business Hours:</strong><br>Monday - Friday: 9am - 6pm PST<br>Saturday: 10am - 2pm PST<br>Sunday: Closed</p>
+                </div>
+                
+                <div class="feature-card mt-3">
+                    <h4>⚡ Quick Response</h4>
+                    <p>We typically respond within 2-4 hours during business hours.</p>
+                </div>
+                
+                <div class="feature-card mt-3">
+                    <h4>🔒 Your Privacy</h4>
+                    <p>Your information is secure and will never be shared with third parties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Prefer a Free SEO Audit Instead?</h2>
+        <p>Get a comprehensive analysis of your website's SEO performance in under 60 seconds.</p>
+        <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free Audit</a>
+    </div>
+</section>
+{% endblock %}

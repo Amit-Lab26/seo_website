@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Case Studies | Real Results from Real Clients{% endblock %}
+{% block meta_description %}See how SEOversion helped businesses increase organic traffic by 300%+. Read detailed case studies with strategies, results, and ROI data.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Proven Results for Businesses Like Yours</h1>
+        <p>Real clients. Real results. Real ROI. See how we've helped businesses dominate their industries through strategic SEO.</p>
+    </div>
+</section>
+
+<!-- Case Studies Grid -->
+<section class="section">
+    <div class="container">
+        <div class="blog-grid">
+            <!-- Case Study 1 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                    300%
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #00FF88; color: #333;">E-commerce</span>
+                    <h3>TechGear Tripled Organic Revenue in 6 Months</h3>
+                    <p class="blog-excerpt">How an e-commerce electronics retailer increased organic traffic by 250% and revenue by 300% through technical SEO and content strategy.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">250%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Traffic Increase</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">300%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Revenue Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='techgear-organic-growth') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #00FF88 0%, #00CC6E 100%); display: flex; align-items: center; justify-content: center; color: #333; font-size: 3rem; font-weight: bold;">
+                    #1
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #0066CC; color: white;">SaaS</span>
+                    <h3>CloudFlow SaaS: From Page 3 to #1 Rankings</h3>
+                    <p class="blog-excerpt">A B2B SaaS company achieved #1 rankings for 15 high-value keywords and 5x'd their demo requests through targeted content and link building.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">15</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">#1 Rankings</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">5x</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Demo Requests</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='cloudflow-saas-rankings') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                    180%
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #FFC107; color: #333;">Local Business</span>
+                    <h3>Urban Wellness: Dominating Local Search</h3>
+                    <p class="blog-excerpt">How a multi-location wellness center became the #1 choice in 5 cities through local SEO, Google Business Profile optimization, and review management.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">180%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Foot Traffic</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">220%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Phone Calls</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='urban-wellness-local-seo') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Case Study 4 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                    400%
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #10B981; color: white;">Healthcare</span>
+                    <h3>MedCare Clinics: 400% More Patient Inquiries</h3>
+                    <p class="blog-excerpt">A healthcare provider network increased patient inquiries by 400% and expanded to 3 new locations thanks to dominant local search visibility.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">400%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Inquiries</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">3</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">New Locations</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='medcare-patient-growth') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Case Study 5 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                    560%
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #8B5CF6; color: white;">Legal</span>
+                    <h3>Premier Law Firm: 560% ROI from SEO</h3>
+                    <p class="blog-excerpt">A personal injury law firm generated $2.8M in new cases from organic search, achieving a 560% return on their SEO investment in 12 months.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">$2.8M</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">New Cases</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">560%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">ROI</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='premier-law-firm-roi') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Case Study 6 -->
+            <div class="blog-card">
+                <div class="blog-image" style="background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                    92%
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category" style="background: #EC4899; color: white;">Real Estate</span>
+                    <h3>Urban Properties: 92% of Traffic from Organic</h3>
+                    <p class="blog-excerpt">A real estate agency eliminated paid ads entirely after SEO delivered 92% of their total website traffic and 80% of property inquiries.</p>
+                    
+                    <div style="margin: 1.5rem 0; padding: 1rem; background: var(--background-gray); border-radius: 8px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">92%</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Organic Traffic</p>
+                            </div>
+                            <div>
+                                <strong style="color: var(--primary-blue); font-size: 1.5rem;">$0</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Ad Spend</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{{ url_for('case_study', slug='urban-properties-organic') }}" class="btn btn-outline">Read Full Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Filter -->
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="text-center mb-4">Industries We've Helped</h2>
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="feature-card text-center">
+                <h4>E-commerce</h4>
+                <p>12 case studies</p>
+            </div>
+            <div class="feature-card text-center">
+                <h4>SaaS & Tech</h4>
+                <p>18 case studies</p>
+            </div>
+            <div class="feature-card text-center">
+                <h4>Healthcare</h4>
+                <p>9 case studies</p>
+            </div>
+            <div class="feature-card text-center">
+                <h4>Legal</h4>
+                <p>7 case studies</p>
+            </div>
+            <div class="feature-card text-center">
+                <h4>Real Estate</h4>
+                <p>11 case studies</p>
+            </div>
+            <div class="feature-card text-center">
+                <h4>Local Services</h4>
+                <p>15 case studies</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Ready to Become Our Next Success Story?</h2>
+        <p>Let's create a case study about your business. Get started with a free SEO audit and strategy session.</p>
+        <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free Audit</a>
+    </div>
+</section>
+{% endblock %}

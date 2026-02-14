@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block title %}Free SEO Resources | Templates, Checklists & Guides{% endblock %}
+{% block meta_description %}Download free SEO resources including keyword research templates, technical SEO checklists, content calendars, and comprehensive guides.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Free SEO Resources to Grow Your Business</h1>
+        <p>Download templates, checklists, and guides to improve your SEO strategy. All free, no credit card required.</p>
+    </div>
+</section>
+
+<!-- Free Tools -->
+<section class="section">
+    <div class="container">
+        <h2 class="mb-4">Free Online SEO Tools</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔍 Keyword Density Checker</h3>
+                <p>Analyze your content to ensure optimal keyword usage without over-optimization. Checks for LSI keywords and provides recommendations.</p>
+                <input type="text" placeholder="Enter URL to analyze" class="form-control mb-3">
+                <button class="btn btn-primary">Analyze Now</button>
+            </div>
+
+            <div class="service-card">
+                <h3>📝 Meta Tag Generator</h3>
+                <p>Create SEO-optimized title tags and meta descriptions that drive clicks. Previews how they'll appear in Google search results.</p>
+                <input type="text" placeholder="Page title" class="form-control mb-2">
+                <textarea placeholder="Page description" class="form-control mb-3" rows="3"></textarea>
+                <button class="btn btn-primary">Generate Tags</button>
+            </div>
+
+            <div class="service-card">
+                <h3>🤖 Robots.txt Generator</h3>
+                <p>Generate a properly formatted robots.txt file to control search engine crawling. Includes user-agent directives and sitemap location.</p>
+                <button class="btn btn-primary">Create Robots.txt</button>
+            </div>
+
+            <div class="service-card">
+                <h3>🗺️ XML Sitemap Generator</h3>
+                <p>Create an XML sitemap for your website to help search engines discover and index your pages more efficiently.</p>
+                <input type="url" placeholder="Enter website URL" class="form-control mb-3">
+                <button class="btn btn-primary">Generate Sitemap</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Downloadable Resources -->
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="mb-4">Downloadable Resources</h2>
+        <div class="blog-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Complete SEO Audit Checklist</h3>
+                <p>A 100-point checklist covering technical SEO, on-page optimization, content, and backlinks. Perfect for auditing your own site or client websites.</p>
+                <ul>
+                    <li>Technical SEO checks</li>
+                    <li>On-page optimization</li>
+                    <li>Content quality assessment</li>
+                    <li>Backlink profile analysis</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('seo-audit-checklist')">Download PDF</button>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Keyword Research Template</h3>
+                <p>Excel spreadsheet template for organizing keyword research. Includes columns for search volume, difficulty, intent, and priority scoring.</p>
+                <ul>
+                    <li>Pre-formatted columns</li>
+                    <li>Priority scoring formulas</li>
+                    <li>Competitor tracking</li>
+                    <li>Content mapping</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('keyword-research-template')">Download Excel</button>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Content Calendar Template</h3>
+                <p>Plan and organize your content strategy for the entire year. Includes editorial calendar, topic ideas, and publishing schedule.</p>
+                <ul>
+                    <li>12-month planning grid</li>
+                    <li>Topic ideation worksheet</li>
+                    <li>Publishing deadlines</li>
+                    <li>Performance tracking</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('content-calendar')">Download Excel</button>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✉️</div>
+                <h3>Link Building Outreach Templates</h3>
+                <p>10 proven email templates for guest posting, broken link building, and digital PR outreach. Includes follow-up sequences.</p>
+                <ul>
+                    <li>Guest post pitches</li>
+                    <li>Broken link outreach</li>
+                    <li>Resource page requests</li>
+                    <li>Follow-up templates</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('outreach-templates')">Download PDF</button>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Monthly SEO Report Template</h3>
+                <p>Professional client-ready report template. Visualize rankings, traffic, conversions, and ROI in an easy-to-understand format.</p>
+                <ul>
+                    <li>Traffic charts</li>
+                    <li>Ranking tables</li>
+                    <li>Conversion tracking</li>
+                    <li>Executive summary</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('seo-report-template')">Download PowerPoint</button>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Local SEO Checklist</h3>
+                <p>Complete checklist for optimizing local search presence. Covers Google Business Profile, citations, reviews, and local content.</p>
+                <ul>
+                    <li>GBP optimization</li>
+                    <li>Citation building</li>
+                    <li>Review management</li>
+                    <li>Local content strategy</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="downloadResource('local-seo-checklist')">Download PDF</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guides & Ebooks -->
+<section class="section">
+    <div class="container">
+        <h2 class="mb-4">Comprehensive Guides</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>📘 Complete SEO Guide 2026</h3>
+                <p>85-page comprehensive guide covering everything from keyword research to link building. Perfect for beginners and intermediate marketers.</p>
+                <p><strong>What's Inside:</strong></p>
+                <ul>
+                    <li>SEO fundamentals explained</li>
+                    <li>Keyword research strategies</li>
+                    <li>On-page optimization</li>
+                    <li>Technical SEO deep dive</li>
+                    <li>Link building tactics</li>
+                    <li>Content marketing</li>
+                    <li>Analytics and reporting</li>
+                </ul>
+                <button class="btn btn-primary">Download Free Ebook</button>
+            </div>
+
+            <div class="service-card">
+                <h3>🤖 AI in SEO: A Practical Guide</h3>
+                <p>40-page guide on leveraging AI for SEO. Learn how to use AI tools for keyword research, content creation, and technical optimization.</p>
+                <p><strong>What's Inside:</strong></p>
+                <ul>
+                    <li>AI tools overview</li>
+                    <li>Automated keyword research</li>
+                    <li>AI content optimization</li>
+                    <li>Predictive analytics</li>
+                    <li>Best practices and warnings</li>
+                </ul>
+                <button class="btn btn-primary">Download Free Ebook</button>
+            </div>
+
+            <div class="service-card">
+                <h3>📍 Local SEO Handbook</h3>
+                <p>50-page guide specifically for local businesses. Dominate local search and attract nearby customers with proven strategies.</p>
+                <p><strong>What's Inside:</strong></p>
+                <ul>
+                    <li>Google Business Profile mastery</li>
+                    <li>Local citation building</li>
+                    <li>Review generation strategies</li>
+                    <li>Local link building</li>
+                    <li>Multi-location SEO</li>
+                </ul>
+                <button class="btn btn-primary">Download Free Ebook</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function downloadResource(resourceName) {
+    const email = prompt('Enter your email to receive the download link:');
+    if (email) {
+        fetch('/api/download/' + resourceName, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email: email})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                alert('Check your email for the download link!');
+            }
+        });
+    }
+}
+</script>
+
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Want Personalized SEO Guidance?</h2>
+        <p>These resources are great, but nothing beats a custom strategy designed for your specific business.</p>
+        <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free SEO Audit</a>
+    </div>
+</section>
+{% endblock %}

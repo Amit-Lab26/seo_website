@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Blog | Tips, Guides & Industry News{% endblock %}
+{% block meta_description %}Learn SEO from the experts. Read our latest guides on keyword research, content optimization, link building, and AI in SEO. New posts every week.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>SEO Insights & Strategies</h1>
+        <p>Expert advice, proven strategies, and the latest trends in search engine optimization.</p>
+    </div>
+</section>
+
+<!-- Search and Filter -->
+<section class="section" style="padding-top: 2rem;">
+    <div class="container">
+        <div style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+            <input type="text" id="blog-search" class="form-control" placeholder="Search articles..." style="flex: 1; min-width: 300px;">
+            
+            <select id="category-filter" class="form-control" style="width: 200px;">
+                <option value="">All Categories</option>
+                {% for category in categories %}
+                <option value="{{ category }}" {% if current_category == category %}selected{% endif %}>{{ category }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Blog Grid -->
+        {% if blog_posts %}
+        <div class="blog-grid">
+            {% for post in blog_posts %}
+            <article class="blog-card" data-category="{{ post.category }}">
+                {% if post.featured_image %}
+                <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="blog-image">
+                {% else %}
+                <div class="blog-image" style="background: linear-gradient(135deg, #0066CC 0%, #00FF88 100%);"></div>
+                {% endif %}
+                
+                <div class="blog-content">
+                    <span class="blog-category">{{ post.category }}</span>
+                    <h3>{{ post.title }}</h3>
+                    <p class="blog-excerpt">{{ post.excerpt }}</p>
+                    <div class="blog-meta">
+                        <span>{{ post.published_date|format_date }}</span>
+                        <span>{{ post.views }} views</span>
+                    </div>
+                    <a href="{{ url_for('blog_post', slug=post.slug) }}">Read More →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="feature-card text-center" style="padding: 4rem;">
+            <h3>No blog posts yet</h3>
+            <p>We're working on creating amazing content for you. Check back soon!</p>
+            <a href="{{ url_for('home') }}" class="btn btn-primary">Return Home</a>
+        </div>
+        {% endif %}
+
+        <!-- Pagination -->
+        {% if blog_posts and blog_posts|length > 9 %}
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+            <button class="btn btn-outline">← Previous</button>
+            <button class="btn btn-primary">1</button>
+            <button class="btn btn-outline">2</button>
+            <button class="btn btn-outline">3</button>
+            <button class="btn btn-outline">Next →</button>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Sidebar Section -->
+<section class="section bg-gray">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+            <!-- Popular Posts -->
+            <div>
+                <h2 class="mb-3">Popular Posts</h2>
+                <div class="blog-grid" style="grid-template-columns: 1fr;">
+                    {% for post in blog_posts[:3] %}
+                    <div class="feature-card" style="display: flex; gap: 1.5rem;">
+                        <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #0066CC 0%, #00FF88 100%); border-radius: 8px; flex-shrink: 0;"></div>
+                        <div>
+                            <h4>{{ post.title }}</h4>
+                            <p style="font-size: 0.875rem; color: var(--text-light); margin-bottom: 0.5rem;">{{ post.views }} views</p>
+                            <a href="{{ url_for('blog_post', slug=post.slug) }}">Read More →</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Newsletter Sidebar -->
+            <div>
+                <div class="feature-card">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Get SEO tips delivered to your inbox every Tuesday.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="form-control mb-2" required>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="feature-card mt-3">
+                    <h4>📥 Free SEO Checklist</h4>
+                    <p>Download our 100-point SEO audit checklist.</p>
+                    <button class="btn btn-secondary" style="width: 100%;">Download Free</button>
+                </div>
+
+                <div class="feature-card mt-3">
+                    <h4>Categories</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        {% for category in categories %}
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                            <a href="?category={{ category }}">{{ category }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Want Personalized SEO Help?</h2>
+        <p>These articles are helpful, but nothing beats a custom strategy designed for your specific business goals.</p>
+        <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free SEO Audit</a>
+    </div>
+</section>
+{% endblock %}

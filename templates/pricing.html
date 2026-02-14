@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Pricing Plans | Affordable Packages from $299/month{% endblock %}
+{% block meta_description %}Transparent SEO pricing with no hidden fees. Choose from Starter, Growth, or Enterprise plans. All packages include AI tools, reporting, and dedicated support.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Simple, Transparent SEO Pricing</h1>
+        <p>No hidden fees. No surprises. Just results-driven SEO that fits your budget.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="pricing-price" data-monthly="299">
+                    <span class="amount">$299</span>
+                    <span class="period">/month</span>
+                </div>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Perfect for small businesses just getting started with SEO</p>
+                <ul class="pricing-features">
+                    <li>10 target keywords</li>
+                    <li>Monthly SEO audit</li>
+                    <li>Basic on-page optimization</li>
+                    <li>2 blog posts per month</li>
+                    <li>Monthly performance report</li>
+                    <li>Email support (24hr response)</li>
+                    <li>Google Analytics setup</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline" style="width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- Growth Plan (Most Popular) -->
+            <div class="pricing-card popular">
+                <div class="pricing-badge">Most Popular</div>
+                <h3>Growth</h3>
+                <div class="pricing-price" data-monthly="799">
+                    <span class="amount">$799</span>
+                    <span class="period">/month</span>
+                </div>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">For growing businesses ready to scale their online presence</p>
+                <ul class="pricing-features">
+                    <li>25 target keywords</li>
+                    <li>Weekly SEO audits</li>
+                    <li>Advanced on-page + technical SEO</li>
+                    <li>4 blog posts per month</li>
+                    <li>Link building (10 links/month)</li>
+                    <li>All AI tools included</li>
+                    <li>Bi-weekly strategy calls</li>
+                    <li>Priority support (4hr response)</li>
+                    <li>Competitor analysis</li>
+                    <li>Local SEO optimization</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary" style="width: 100%;">Get Started</a>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="pricing-price" data-monthly="1999">
+                    <span class="amount">$1,999</span>
+                    <span class="period">/month</span>
+                </div>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">Maximum impact for established businesses dominating their niche</p>
+                <ul class="pricing-features">
+                    <li>Unlimited keywords</li>
+                    <li>Daily monitoring</li>
+                    <li>Full technical SEO management</li>
+                    <li>8 blog posts per month</li>
+                    <li>Aggressive link building (25 links/month)</li>
+                    <li>Custom AI tool development</li>
+                    <li>Weekly strategy calls</li>
+                    <li>Dedicated account manager</li>
+                    <li>24/7 priority support</li>
+                    <li>Advanced competitor tracking</li>
+                    <li>Multi-location SEO</li>
+                    <li>Quarterly in-person reviews</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline" style="width: 100%;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="text-center mb-4">What's Included in All Plans</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>✓ No Setup Fees</h4>
+                <p>We get started immediately with no additional costs</p>
+            </div>
+            <div class="feature-card">
+                <h4>✓ Month-to-Month</h4>
+                <p>Cancel anytime. No long-term contracts required</p>
+            </div>
+            <div class="feature-card">
+                <h4>✓ 30-Day Guarantee</h4>
+                <p>Not satisfied? Get a full refund in the first month</p>
+            </div>
+            <div class="feature-card">
+                <h4>✓ Transparent Reporting</h4>
+                <p>Real-time dashboards and detailed monthly reports</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <button class="faq-question">Are there any setup fees?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No, we don't charge setup fees. You pay only the monthly package rate, and we get started immediately after onboarding.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I upgrade or downgrade my plan?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! You can change your plan anytime. Upgrades take effect immediately, while downgrades take effect at your next billing cycle.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What payment methods do you accept?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We accept all major credit cards (Visa, Mastercard, Amex, Discover), ACH bank transfers, and PayPal. Enterprise clients can also arrange for invoicing with NET-30 payment terms.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Not Sure Which Plan is Right for You?</h2>
+        <p>Get a free consultation and custom quote tailored to your specific needs and goals.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get Custom Quote</a>
+    </div>
+</section>
+{% endblock %}

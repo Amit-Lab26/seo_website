@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}SEO FAQ | Common Questions About Our Services{% endblock %}
+{% block meta_description %}Get answers to frequently asked questions about SEO services, pricing, timelines, and our AI tools. Learn what to expect when working with SEOversion.{% endblock %}
+
+{% block schema_markup %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is SEO and why do I need it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEO (Search Engine Optimization) is the practice of optimizing your website to rank higher in search engine results. You need it because 93% of online experiences begin with a search engine."
+            }
+        }
+    ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about our SEO services, pricing, and processes.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="faq-section">
+            {% for category, questions in faqs.items() %}
+            <div class="faq-category">
+                <h3>{{ category }}</h3>
+                {% for faq in questions %}
+                <div class="faq-item">
+                    <button class="faq-question">{{ faq.question }}</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">{{ faq.answer }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Still Have Questions CTA -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Still Have Questions?</h2>
+        <p>Our team is here to help. Get in touch and we'll answer all your questions about SEO and our services.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-secondary">Contact Us</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - SEOversion Blog{% endblock %}
+{% block meta_description %}{{ post.excerpt }}{% endblock %}
+
+{% block schema_markup %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ post.title }}",
+    "description": "{{ post.excerpt }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ post.author }}"
+    },
+    "datePublished": "{{ post.published_date }}",
+    "publisher": {
+        "@type": "Organization",
+        "name": "SEOversion",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://seoversion.com/static/images/logo.png"
+        }
+    }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Article Header -->
+<section class="hero" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+        <span class="blog-category">{{ post.category }}</span>
+        <h1 style="margin-top: 1rem;">{{ post.title }}</h1>
+        <div class="blog-meta" style="margin-top: 1.5rem; display: flex; gap: 2rem; color: var(--text-light);">
+            <span>📅 {{ post.published_date|format_date }}</span>
+            <span>✍️ {{ post.author }}</span>
+            <span>👁️ {{ post.views }} views</span>
+            <span>⏱️ 8 min read</span>
+        </div>
+    </div>
+</section>
+
+<!-- Article Content -->
+<article class="section">
+    <div class="container" style="max-width: 800px;">
+        {% if post.featured_image %}
+        <img src="{{ post.featured_image }}" alt="{{ post.title }}" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+        {% endif %}
+        
+        <div style="font-size: 1.125rem; line-height: 1.8; color: var(--text-dark);">
+            {{ post.content|safe }}
+        </div>
+        
+        <!-- Social Share Buttons -->
+        <div style="margin: 3rem 0; padding: 2rem; background: var(--background-gray); border-radius: 12px; text-align: center;">
+            <h4>Share this article:</h4>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                <a href="https://twitter.com/intent/tweet?url={{ request.url }}&text={{ post.title }}" target="_blank" class="btn btn-outline">Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.url }}" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}" target="_blank" class="btn btn-outline">Facebook</a>
+                <a href="mailto:?subject={{ post.title }}&body={{ request.url }}" class="btn btn-outline">Email</a>
+            </div>
+        </div>
+        
+        <!-- Author Bio -->
+        <div style="display: flex; gap: 2rem; align-items: center; padding: 2rem; background: var(--background-white); border: 2px solid var(--border-color); border-radius: 12px; margin: 3rem 0;">
+            <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-green) 100%); flex-shrink: 0;"></div>
+            <div>
+                <h4>About {{ post.author }}</h4>
+                <p style="margin-bottom: 0;">{{ post.author }} is an SEO expert at SEOversion with over 10 years of experience helping businesses dominate search results. Specializing in technical SEO and content strategy.</p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Related Posts -->
+{% if related_posts %}
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="text-center mb-4">Related Articles</h2>
+        <div class="blog-grid">
+            {% for related in related_posts[:3] %}
+            <article class="blog-card">
+                {% if related.featured_image %}
+                <img src="{{ related.featured_image }}" alt="{{ related.title }}" class="blog-image">
+                {% else %}
+                <div class="blog-image" style="background: linear-gradient(135deg, #0066CC 0%, #00FF88 100%);"></div>
+                {% endif %}
+                <div class="blog-content">
+                    <span class="blog-category">{{ related.category }}</span>
+                    <h3>{{ related.title }}</h3>
+                    <p class="blog-excerpt">{{ related.excerpt }}</p>
+                    <a href="{{ url_for('blog_post', slug=related.slug) }}">Read More →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Newsletter CTA -->
+<section class="cta-section">
+    <div class="container" style="max-width: 700px; text-align: center;">
+        <h2>Get SEO Tips Delivered Weekly</h2>
+        <p>Join 10,000+ marketers getting actionable SEO advice in their inbox every Tuesday.</p>
+        <form class="newsletter-form" style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <input type="email" placeholder="Enter your email" required style="flex: 1; padding: 15px; border-radius: 6px; border: none; font-size: 1rem;">
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

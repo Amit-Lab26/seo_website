@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Free SEO Audit | Analyze Your Website in 60 Seconds{% endblock %}
+{% block meta_description %}Get a comprehensive free SEO audit report. We'll analyze 50+ SEO factors including technical issues, on-page optimization, and backlink profile.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Get Your Free SEO Audit Report</h1>
+        <p>Discover exactly what's holding your website back from ranking #1. No credit card required.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem;">
+            <!-- Audit Form -->
+            <div>
+                <h2 class="mb-3">Enter Your Website Details</h2>
+                <form method="POST" action="{{ url_for('free_audit') }}">
+                    <div class="form-group">
+                        <label for="website_url">Website URL *</label>
+                        <input type="url" id="website_url" name="website_url" class="form-control" placeholder="https://yourwebsite.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="you@company.com" required>
+                        <small style="color: var(--text-light);">We'll send your audit report to this email</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industry">Industry / Niche</label>
+                        <input type="text" id="industry" name="industry" class="form-control" placeholder="e.g., E-commerce, SaaS, Healthcare">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Top 3 Competitors (Optional)</label>
+                        <input type="url" name="competitor1" class="form-control mb-2" placeholder="https://competitor1.com">
+                        <input type="url" name="competitor2" class="form-control mb-2" placeholder="https://competitor2.com">
+                        <input type="url" name="competitor3" class="form-control" placeholder="https://competitor3.com">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 15px;">
+                        🚀 Get My Free Audit Report
+                    </button>
+                    
+                    <p class="text-center mt-3" style="color: var(--text-light); font-size: 0.875rem;">
+                        By submitting, you agree to receive your audit report and occasional SEO tips via email.
+                    </p>
+                </form>
+            </div>
+            
+            <!-- What's Included -->
+            <div>
+                <div class="feature-card">
+                    <h3>What's Included in Your Audit</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+                            ✓ <strong>Technical SEO Analysis</strong><br>
+                            <small>Site speed, mobile-friendliness, crawl errors</small>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+                            ✓ <strong>On-Page Optimization</strong><br>
+                            <small>Meta tags, headings, content quality</small>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+                            ✓ <strong>Backlink Profile</strong><br>
+                            <small>Link quality, authority score, toxic links</small>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+                            ✓ <strong>Keyword Opportunities</strong><br>
+                            <small>High-value keywords you're missing</small>
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);">
+                            ✓ <strong>Competitor Comparison</strong><br>
+                            <small>How you stack up against competitors</small>
+                        </li>
+                        <li style="padding: 0.75rem 0;">
+                            ✓ <strong>Action Plan</strong><br>
+                            <small>Prioritized recommendations to improve</small>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card mt-3" style="background: linear-gradient(135deg, var(--primary-blue) 0%, #0052A3 100%); color: white;">
+                    <h4 style="color: white;">⚡ Delivered in 24 Hours</h4>
+                    <p style="color: rgba(255,255,255,0.9); margin: 0;">
+                        Most audits are delivered within 2-4 hours during business hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-gray">
+    <div class="container">
+        <h2 class="text-center mb-4">Why Get an SEO Audit?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Identify Hidden Issues</h3>
+                <p>Discover technical problems, broken links, and SEO mistakes that are silently costing you traffic and rankings.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Data-Driven Insights</h3>
+                <p>Get concrete data on what's working, what's not, and exactly what to prioritize for maximum ROI.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Competitive Advantage</h3>
+                <p>See how you compare to competitors and uncover opportunities they're missing in your market.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Stop Wasting Money</h3>
+                <p>Find out if your current SEO efforts are working or if you're throwing money at the wrong tactics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="testimonial-slider">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The free audit revealed issues we had no idea existed. After implementing their recommendations, our traffic increased 180% in just 4 months. Best investment we've made!"</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechStart Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Over 10,000 Audits Delivered</h2>
+        <p>Join thousands of businesses who've used our free audit to transform their SEO strategy.</p>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="btn btn-secondary">Get Your Audit Now</a>
+    </div>
+</section>
+{% endblock %}

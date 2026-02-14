@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Services | Keyword Research, Content & Technical SEO{% endblock %}
+{% block meta_description %}Comprehensive SEO services including AI keyword research, on-page optimization, technical audits, link building, and content strategy. Get your free SEO audit today.{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h1>Complete SEO Services for Business Growth</h1>
+        <p>From strategy to execution, we handle every aspect of your SEO to drive rankings, traffic, and revenue.</p>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section">
+    <div class="container">
+        <div class="services-grid">
+            <!-- Service 1: Keyword Research -->
+            <div class="service-card" id="keyword-research">
+                <div class="feature-icon">🔍</div>
+                <h3>Keyword Research & Strategy</h3>
+                <p>Discover the exact keywords your customers are searching for. Our AI-powered keyword research goes beyond search volume to identify high-converting terms with realistic ranking potential. We analyze search intent, competition levels, and user behavior patterns to build a keyword strategy that delivers ROI, not just traffic.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>AI-powered keyword discovery using machine learning</li>
+                    <li>Competitor keyword gap analysis</li>
+                    <li>Search intent mapping (informational, commercial, transactional)</li>
+                    <li>Long-tail keyword opportunities</li>
+                    <li>Keyword difficulty scoring and ranking probability</li>
+                    <li>Local keyword research for geo-targeted campaigns</li>
+                    <li>Quarterly keyword strategy updates</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> New websites, site migrations, content planning, and businesses entering new markets.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+
+            <!-- Service 2: On-Page SEO -->
+            <div class="service-card" id="on-page-seo">
+                <div class="feature-icon">📝</div>
+                <h3>On-Page SEO Optimization</h3>
+                <p>Your website's content and structure are the foundation of SEO success. We optimize every element of your pages to match search intent, improve relevance signals, and maximize click-through rates. From title tags to internal linking, we ensure every page is perfectly optimized for both search engines and users.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Title tag and meta description optimization</li>
+                    <li>Header tag (H1-H6) hierarchy optimization</li>
+                    <li>Content optimization for target keywords</li>
+                    <li>Image alt text and file name optimization</li>
+                    <li>Internal linking strategy and implementation</li>
+                    <li>Schema markup (structured data) implementation</li>
+                    <li>URL structure optimization</li>
+                    <li>Featured snippet optimization</li>
+                    <li>E-A-T signal strengthening (Expertise, Authority, Trust)</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> Websites with good content that isn't ranking, businesses launching new pages, and content-heavy sites.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+
+            <!-- Service 3: Technical SEO -->
+            <div class="service-card" id="technical-seo">
+                <div class="feature-icon">⚙️</div>
+                <h3>Technical SEO</h3>
+                <p>Technical issues silently kill rankings. We identify and fix crawl errors, speed problems, mobile issues, and indexation barriers that prevent search engines from properly accessing and ranking your content. Our technical audits go deep to uncover problems your competitors are missing.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Comprehensive technical SEO audit (100+ checkpoints)</li>
+                    <li>Site speed optimization (Core Web Vitals)</li>
+                    <li>Mobile-friendliness optimization</li>
+                    <li>Crawl error identification and fixing</li>
+                    <li>XML sitemap creation and optimization</li>
+                    <li>Robots.txt configuration</li>
+                    <li>Canonical tag implementation</li>
+                    <li>Redirect chain fixing (301s, 302s)</li>
+                    <li>SSL/HTTPS implementation support</li>
+                    <li>JavaScript rendering issues resolution</li>
+                    <li>Structured data validation and fixing</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> E-commerce sites, JavaScript-heavy websites, sites after migrations, and businesses experiencing ranking drops.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+
+            <!-- Service 4: Content Marketing -->
+            <div class="service-card" id="content-marketing">
+                <div class="feature-icon">✍️</div>
+                <h3>Content Marketing & Creation</h3>
+                <p>Content is king, but only if it's strategic. We create SEO-optimized content that ranks in search engines while genuinely helping your audience. Our content strategy combines keyword research, competitor analysis, and user intent mapping to create articles, guides, and resources that drive organic traffic and conversions.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>SEO content strategy development</li>
+                    <li>Content gap analysis (what your competitors have that you don't)</li>
+                    <li>Topic cluster planning and pillar page creation</li>
+                    <li>SEO blog post writing (1,500-2,500 words)</li>
+                    <li>Landing page copywriting</li>
+                    <li>Content calendar planning (12 months)</li>
+                    <li>Existing content optimization and refresh</li>
+                    <li>Product/service page SEO copywriting</li>
+                    <li>FAQ and resource page creation</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> Businesses building authority, B2B companies with long sales cycles, and brands targeting top-of-funnel traffic.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+
+            <!-- Service 5: Link Building -->
+            <div class="service-card" id="link-building">
+                <div class="feature-icon">🔗</div>
+                <h3>Link Building & Digital PR</h3>
+                <p>Backlinks remain one of Google's top ranking factors. We build high-quality, relevant links from authoritative websites using white-hat strategies that won't put your site at risk. Our digital PR approach combines traditional outreach with content-driven link acquisition to build a natural, diverse backlink profile.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Backlink audit and toxic link identification</li>
+                    <li>Competitor backlink analysis</li>
+                    <li>High-authority link acquisition (white-hat only)</li>
+                    <li>Guest posting on relevant industry sites</li>
+                    <li>Broken link building opportunities</li>
+                    <li>Digital PR and journalist outreach (HARO)</li>
+                    <li>Resource page link building</li>
+                    <li>Unlinked brand mention conversion</li>
+                    <li>Monthly link building reports with quality metrics</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> Competitive industries, new websites building authority, and businesses stuck on page 2 of Google.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+
+            <!-- Service 6: Local SEO -->
+            <div class="service-card" id="local-seo">
+                <div class="feature-icon">📍</div>
+                <h3>Local SEO</h3>
+                <p>Dominate local search results and attract nearby customers. We optimize your Google Business Profile, build local citations, and implement geo-targeted strategies to ensure you appear when customers in your area search for your services. Perfect for businesses with physical locations or service areas.</p>
+                
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Google Business Profile optimization and management</li>
+                    <li>Local citation building (directories, review sites)</li>
+                    <li>NAP (Name, Address, Phone) consistency audit</li>
+                    <li>Review generation strategy and management</li>
+                    <li>Local keyword research and optimization</li>
+                    <li>Google Maps ranking optimization</li>
+                    <li>Location page creation for multi-location businesses</li>
+                    <li>Local schema markup implementation</li>
+                    <li>Local competitor analysis</li>
+                </ul>
+                
+                <p><strong>Perfect for:</strong> Local businesses, multi-location companies, service area businesses, and franchises.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline">Get Started →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="section bg-gray">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our SEO Process</h2>
+            <p>A proven methodology that delivers consistent, measurable results</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. Discovery & Audit</h3>
+                <p>We start with a comprehensive audit of your website, competitors, and industry. This reveals opportunities, threats, and the exact roadmap to success.</p>
+            </div>
+            <div class="feature-card">
+                <h3>2. Strategy Development</h3>
+                <p>Based on audit findings, we create a custom SEO strategy with prioritized tactics, realistic timelines, and clear KPIs aligned with your business goals.</p>
+            </div>
+            <div class="feature-card">
+                <h3>3. Implementation</h3>
+                <p>Our team executes the strategy: fixing technical issues, optimizing content, building links, and creating new assets. You'll see progress from day one.</p>
+            </div>
+            <div class="feature-card">
+                <h3>4. Monitor & Optimize</h3>
+                <p>SEO is never "done." We continuously monitor rankings, traffic, and conversions, making data-driven optimizations to maximize ROI.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2>Ready to Dominate Your Industry?</h2>
+        <p>Let's build an SEO strategy that drives real business results. Get your free audit and strategy session.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('free_audit') }}" class="btn btn-secondary">Get Free Audit</a>
+            <a href="{{ url_for('pricing') }}" class="btn btn-outline" style="color: white; border-color: white;">View Pricing</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

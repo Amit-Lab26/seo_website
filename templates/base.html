@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}SEOversion - AI-Powered SEO Services | Boost Your Rankings{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}SEO, search engine optimization, AI SEO, keyword research, content optimization{% endblock %}">
+    <meta name="author" content="SEOversion">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% block og_title %}SEOversion - AI-Powered SEO Services{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Transform your online presence with AI-driven SEO solutions{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}SEOversion - AI-Powered SEO Services{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}AI-driven SEO solutions that drive real results{% endblock %}">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.url }}">
+    
+    <title>{% block title %}SEOversion - AI-Powered SEO Services{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/logo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    
+    {% block extra_css %}{% endblock %}
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SEOversion",
+        "url": "https://seoversion.com",
+        "logo": "https://seoversion.com/static/images/logo.png",
+        "description": "AI-powered SEO services and tools",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Digital Avenue, Suite 500",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94102",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service",
+            "email": "contact@seoversion.com"
+        },
+        "sameAs": [
+            "https://twitter.com/seoversion",
+            "https://linkedin.com/company/seoversion",
+            "https://facebook.com/seoversion"
+        ]
+    }
+    </script>
+    
+    {% block schema_markup %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="{{ url_for('home') }}" class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">SEOversion</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('ai_products') }}">AI Products</a></li>
+                    <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                    <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('free_audit') }}" class="btn btn-primary">Get Free Audit</a></li>
+                </ul>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages container">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="{{ url_for('home') }}" class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">SEOversion</span>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.8); margin-top: 1rem;">
+                        AI-powered SEO solutions that drive real results. 
+                        Transform your online presence with data-driven strategies.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" aria-label="Facebook">f</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+                        <li><a href="{{ url_for('case_studies') }}">Case Studies</a></li>
+                        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('services') }}#keyword-research">Keyword Research</a></li>
+                        <li><a href="{{ url_for('services') }}#on-page-seo">On-Page SEO</a></li>
+                        <li><a href="{{ url_for('services') }}#technical-seo">Technical SEO</a></li>
+                        <li><a href="{{ url_for('services') }}#link-building">Link Building</a></li>
+                        <li><a href="{{ url_for('services') }}#content-marketing">Content Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>AI Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('ai_products') }}#keyword-explorer">Keyword Explorer</a></li>
+                        <li><a href="{{ url_for('ai_products') }}#content-optimizer">Content Optimizer</a></li>
+                        <li><a href="{{ url_for('ai_products') }}#rank-tracker">Rank Tracker</a></li>
+                        <li><a href="{{ url_for('ai_products') }}#seo-auditor">SEO Auditor</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15551234567">📞 (555) 123-4567</a></li>
+                        <li><a href="mailto:contact@seoversion.com">✉️ contact@seoversion.com</a></li>
+                        <li>📍 123 Digital Avenue, Suite 500<br>San Francisco, CA 94102</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SEOversion. All rights reserved. | 
+                   <a href="{{ url_for('privacy') }}">Privacy Policy</a> | 
+                   <a href="{{ url_for('terms') }}">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+    
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>
